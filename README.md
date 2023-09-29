@@ -2,7 +2,7 @@
 A small addon to the core of a private server written in php, which works through an API key and a POST method. With it, you can get data about the user, level, etc.
 ## How to setup
 - Edit `$key` variable in `config/api.php`.
-- Drag & drop GDPS-API files to your server.
+- Drag & drop GDPS-API files to your server. Example `http://yourserver.com/database/`.
 - You're all done!
 ## How to use
 - Like in python you can get data from api
@@ -14,7 +14,7 @@ data = {
     "id": 2
 }
 
-res = requests.post("http://example.com/database/api/levelInfo.php", data).json()
+res = requests.post("http://yourserver.com/database/api/levelInfo.php", data).json()
 
 match res["success"]:
     case True:
