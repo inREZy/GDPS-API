@@ -5,7 +5,7 @@ A small addon to the core of a private server written in php, which works throug
 - Drag & drop GDPS-API files to your server. Example: `http://yourserver.com/database/`.
 - You're all done!
 ## How to use
-- Like in python you can get data from api
+- Like in python you can get data from API. Example:
 ```python
 import requests
 
@@ -22,7 +22,7 @@ match res["success"]:
     case _:
         print(f"[ERROR] {res['message']}")
 ```
-## POST Data
+## POST Parameters
 All files requires `key`
 - levelInfo.php `id`
 - levelTimely.php `type` (0 or 1)
