@@ -32,5 +32,5 @@ All files requires `key`
 - songSearch.php `query`
 - userLevelSearch.php `user` `page`
 - userStats.php `user`
-## Important
+### Important
 Tested on php 7.1
