@@ -23,7 +23,7 @@ match res["success"]:
         print(f"[ERROR] {res['message']}")
 ```
 ## POST Parameters
-All files needs `key` parameter.
+All files needs a `key` parameter.
 - levelInfo.php `id`
 - levelTimely.php `type` (0 or 1)
 - songAdd.php `link`
