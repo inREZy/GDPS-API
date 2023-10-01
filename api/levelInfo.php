@@ -4,12 +4,12 @@ include_once "../incl/lib/connection.php";
 include_once "../config/api.php";
 require_once "../incl/lib/mainLib.php";
 header("Content-Type: application/json");
-if($_GET["key"] == $apiKey) {
+if($_POST["key"] == $apiKey) {
 	$gs = new mainLib();
-	if($_GET["id"]) {
-		if(is_numeric($_GET["id"])) {
+	if($_POST["id"]) {
+		if(is_numeric($_POST["id"])) {
 			$query = $db->prepare("SELECT * FROM levels WHERE levelID = :id");
-			$query->execute([':id' => $_GET["id"]]);
+			$query->execute([':id' => $_POST["id"]]);
 			if($query->rowCount()) {
 				$levelInfo = $query->fetch();
 				$difficulty = $gs->getDifficulty($levelInfo["starDifficulty"], $levelInfo["starAuto"], $levelInfo["starDemon"]);
